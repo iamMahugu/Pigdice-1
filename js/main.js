@@ -14,7 +14,6 @@ $(document).ready(function(){
         $("#love").append("<li>"+compare+"</li>")
 				$("#love").hide();
 
-        //$("#love").hide()
         var total=0;
         $("#love li").each(function(){
           total+=parseFloat($(this).html());
@@ -23,11 +22,15 @@ $(document).ready(function(){
         })
 				var player1=new Player1(total)
 				player1.score.push(total)
-				console.log(player1.score)
+				$("#hold").click(function(){
+					$("#save").text()
+				})
+
 			}
 			else if(compare==1){
 				alert("you lost")
 				$("#love").empty()
+				$("#show").text("0");
 			}
 
   })
