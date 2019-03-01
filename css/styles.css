@@ -2,3 +2,9 @@ h1{
   color: blue;
   text-align: center;
 }
+.card{
+  width: 20%;
+}
+.one div{
+  margin: 5px;
+}
