@@ -4,41 +4,31 @@ function rollDice(){
 	return Math.round(result)
 }
 function Player1(score){
-	this.score=score;
+	this.score=[];
 }
 $(document).ready(function(){
   $("#roll").click(function(){
     var compare=rollDice();
-    	if(compare>1 && compare<=6){
+    	if(compare>1){
     		$("#id").text("you rolled "+compare);
         $("#love").append("<li>"+compare+"</li>")
-        $("#love").hide()
+				$("#love").hide();
+
+        //$("#love").hide()
         var total=0;
         $("#love li").each(function(){
           total+=parseFloat($(this).html());
           $("#show").text(total)
 
         })
-				if(compare==1){
-					alert("your turn has ended")
-				}
 				var player1=new Player1(total)
-
-					if(player1.score>99){
-						alert("you won")
-					}
-
-        }
-
-
-
-    	else{
-    		$("#id").text("Bad luck you rolled "+compare+" and your turn has ended")
-
-
-        }
-
-
+				player1.score.push(total)
+				console.log(player1.score)
+			}
+			else if(compare==1){
+				alert("you lost")
+				$("#love").empty()
+			}
 
   })
 
