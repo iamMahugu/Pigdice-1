@@ -1,4 +1,4 @@
-function rollDice(){
+/*function rollDice(){
 
 	var result= Math.ceil(Math.random()*6)
 	return Math.round(result)
@@ -9,7 +9,10 @@ function Player1(score){
 var newScore=[];
 
 $(document).ready(function(){
+
   $("#roll").click(function(){
+		var all=0;
+
     var compare=rollDice();
 		newScore.push(compare)
 		console.log(newScore)
@@ -23,33 +26,33 @@ $(document).ready(function(){
           total+=parseFloat($(this).html());
           $("#show").text(total)
 
+
         })
-				var player1=new Player1(total)
-				player1.score.push(total)
 				$("#hold").click(function(){
-					var all=0;
+
 					for(i=0;i<newScore.length;i++){
-						if (newScore[i]==1) {
-								newScore[i]=0;
-
-						}
-						else {
 							all=all+newScore[i]
-						}
+							$("#save").text(all)
+							}
 
-					}
-					$("#save").text(all)
-					$("#save").text(all)
+
+					$("#save").text(newall)
+
 					$("#love").empty()
-					$("#show").text("0");
+					$("#show").text(0);
+
 				})
 
 			}
 			else if(compare==1){
+				newScore.length=0;
+				var newall=all;
 				alert("you lost")
 				$("#love").empty()
 				$("#show").text("0");
 			}
+
+
 
   })
 
