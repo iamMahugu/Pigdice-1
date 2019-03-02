@@ -27,7 +27,21 @@ $(document).ready(function(){
 				var player1=new Player1(total)
 				player1.score.push(total)
 				$("#hold").click(function(){
-					$("#save").text()
+					var all=0;
+					for(i=0;i<newScore.length;i++){
+						if (newScore[i]==1) {
+								newScore[i]=0;
+
+						}
+						else {
+							all=all+newScore[i]
+						}
+
+					}
+					$("#save").text(all)
+					$("#save").text(all)
+					$("#love").empty()
+					$("#show").text("0");
 				})
 
 			}
