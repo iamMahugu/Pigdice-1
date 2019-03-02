@@ -6,9 +6,13 @@ function rollDice(){
 function Player1(score){
 	this.score=[];
 }
+var newScore=[];
+
 $(document).ready(function(){
   $("#roll").click(function(){
     var compare=rollDice();
+		newScore.push(compare)
+		console.log(newScore)
     	if(compare>1){
     		$("#id").text("you rolled "+compare);
         $("#love").append("<li>"+compare+"</li>")
@@ -38,6 +42,9 @@ $(document).ready(function(){
 
 
 })
+
+
+
 /*  var storeRoll=[];
   storeRoll.push(compare);
   var totalSCore=0;
