@@ -10,11 +10,12 @@ $(document).ready(function(){
   $("#roll").click(function(){
   var roll=rollDice();
   $("#id").text(roll)
+  var total=0
   if (roll!=1) {
     newScore.push(roll);
     constArray.push(roll);
 
-    var total=0
+
     for(i=0;i<newScore.length;i++){
       total=total+newScore[i]
     }
@@ -26,12 +27,19 @@ $(document).ready(function(){
     console.log(total)
     console.log(newScore)
 
+
   }
 
   else {
-    alert("you rolled one and your roll ad ended ")
-    $("#show").text(0)
-    newScore.length=0;
+        alert("you rolled one and your roll has ended ")
+        $("#show").text(0)
+        /////////
+        var em=[]
+        em.push(total)
+
+        console.log(em)
+        newScore.length=0;
+
 
 
 
