@@ -50,6 +50,8 @@ $(document).ready(function(){
 		$("#winOne").hide();
 		$("#winTwo").hide();
 		$("#restart").hide();
+		$("#restart2").hide();
+
 
 	})
 
@@ -148,6 +150,7 @@ $(document).ready(function(){
 	$("#restart").click(function(){
 		newScore.length=0;
 		newtotal=0;
+		cumulativeArray.length=0;
 		constArray.length=0;
 		$("#perRound").text("00.00");
 		$("#save").text("00.00");
@@ -155,6 +158,16 @@ $(document).ready(function(){
 		$("#restart").hide();
 		$("#diceOne").show();
 		$("#winOne").hide();
+		$("#diceOne").show();
+		$("#winOne").hide();
+		$("#saveTwo").text("00.00");
+		$("#playTwoTotal").text("00.00");
+		$("#rolledTwo").text("00.00");
+		$("#restart2").hide();
+		$("#diceTwo").show();
+		$("#winTwo").hide();
+		$("#two").removeClass();
+		$("#one").removeClass();
 
 
 
@@ -203,6 +216,38 @@ $(document).ready(function(){
 			$("#one").addClass("green");
 			$("#two").removeClass();
 			$("#play2Roll").prop("disabled",true)
+
+
+		})
+		if(cumulativeTotal()>99){
+			$("#diceTwo").hide();
+			$("#winTwo").fadeIn(1000);
+			$("#winTwo").show();
+			$("#restart2").fadeIn();
+			$("#restart2").show();
+
+		}
+		$("#restart2").click(function(){
+			newScore.length=0;
+			newtotal=0;
+			cumulativeArray.length=0;
+
+			constArray.length=0;
+			$("#perRound").text("00.00");
+			$("#save").text("00.00");
+			$("#playone").text("00.00");
+			$("#restart").hide();
+			$("#diceOne").show();
+			$("#winOne").hide();
+			$("#saveTwo").text("00.00");
+			$("#playTwoTotal").text("00.00");
+			$("#rolledTwo").text("00.00");
+			$("#restart2").hide();
+			$("#diceTwo").show();
+			$("#winTwo").hide();
+			$("#two").removeClass();
+			$("#one").removeClass();
+
 
 
 		})
