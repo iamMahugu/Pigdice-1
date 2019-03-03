@@ -1,4 +1,4 @@
-function rollDice(){
+/*function rollDice(){
 
 	var result= Math.ceil(Math.random()*6)
 	return Math.round(result)
@@ -175,7 +175,7 @@ $(document).ready(function(){
 
   /*var green=[];
   green.push(total);
-  alert(green)*/
+  alert(green)
 
 
 
@@ -289,4 +289,4 @@ $(document).ready(function(){
 
 
 
-  });
+});*/
