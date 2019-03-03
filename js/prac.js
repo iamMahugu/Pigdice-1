@@ -5,7 +5,7 @@ function rollDice(){
 }
 var newScore=[];
 var constArray=[];
-
+var imageArray=["img/one.png","img/two.png","img/three.png","img/four.png","img/five.png","img/six.png"]
 $(document).ready(function(){
 	$("#play").click(function(){
 		$("#players").fadeIn(2000);
@@ -25,6 +25,8 @@ $(document).ready(function(){
 		$("#show1").show();
 		$("#one").text(playerOne);
 		$("#two").text(playerTwo);
+		$("#winOne").hide();
+		$("#winTwo").hide();
 
 	})
 
@@ -32,6 +34,36 @@ $(document).ready(function(){
 
   $("#rollOne").click(function(){
   var roll=rollDice();
+	var diceMe=roll;
+	if(diceMe==1){
+		var img=0
+		document.getElementById('img').src=imageArray[img];
+
+	}
+	else if (diceMe==2) {
+		var img=1;
+		document.getElementById('img').src=imageArray[img];
+
+	}
+	else if (diceMe==3) {
+		var img=2;
+		document.getElementById('img').src=imageArray[img];
+
+	}
+	else if (diceMe==4) {
+		var img=3;
+		document.getElementById('img').src=imageArray[img];
+
+	}
+	else if (diceMe==5) {
+		var img=4;
+		document.getElementById('img').src=imageArray[img];
+
+	}
+	else {
+		var img=5;
+		document.getElementById('img').src=imageArray[img];
+	}
   $("#playone").text(roll)
   var total=0
   if (roll!=1) {
