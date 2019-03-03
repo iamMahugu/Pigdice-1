@@ -186,6 +186,35 @@ $(document).ready(function(){
 	$("#play2Roll").click(function(){
 		var roll=rollDice();
 		$("#rolledTwo").text(roll);
+		if(roll==1){
+			var img=0
+			document.getElementById('img').src=imageArray[img];
+
+		}
+		else if (diceMe==2) {
+			var img=1;
+			document.getElementById('img').src=imageArray[img];
+
+		}
+		else if (diceMe==3) {
+			var img=2;
+			document.getElementById('img').src=imageArray[img];
+
+		}
+		else if (diceMe==4) {
+			var img=3;
+			document.getElementById('img').src=imageArray[img];
+
+		}
+		else if (diceMe==5) {
+			var img=4;
+			document.getElementById('img').src=imageArray[img];
+
+		}
+		else {
+			var img=5;
+			document.getElementById('img').src=imageArray[img];
+		}
 		if(roll!=1){
 			player2Array.push(roll);
 			cumulativeArray.push(roll)
