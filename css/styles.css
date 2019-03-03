@@ -88,6 +88,7 @@ footer{
   -webkit-transform:rotate(-2deg);
   -webkit-box-shadow: 3px 3px 5px black;
   box-shadow: 3px 3px 5px black;
+  display: inline-block;
 
 }
 .dice{
@@ -99,4 +100,8 @@ footer{
 .dice img{
   height: 50px;
   width: 50px;
+}
+.green{
+  background-color: lightgreen;
+  color: white;
 }
