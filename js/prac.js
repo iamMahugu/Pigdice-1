@@ -30,9 +30,9 @@ $(document).ready(function(){
 
 
 
-  $("#roll").click(function(){
+  $("#rollOne").click(function(){
   var roll=rollDice();
-  $("#id").text(roll)
+  $("#playone").text(roll)
   var total=0
   if (roll!=1) {
     newScore.push(roll);
@@ -42,7 +42,7 @@ $(document).ready(function(){
     for(i=0;i<newScore.length;i++){
       total=total+newScore[i]
     }
-    $("#show").text(total)
+    $("#perRound").text(total)
     var newtotal=0;
     for(z=0;z<constArray.length;z++){
       newtotal=newtotal+constArray[z]
@@ -68,8 +68,8 @@ $(document).ready(function(){
 
 
   }
-  $("#hold").click(function(){
-    $("#show").text(0);
+  $("#holdOne").click(function(){
+    $("#perRound").text(0);
     newScore.length=0;
     $("#save").text(newtotal)
   })

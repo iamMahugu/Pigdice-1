@@ -82,3 +82,11 @@ footer{
   background-color: #12889963;
   margin: 2px;
 }
+.playe1{
+  margin: auto;
+  width: 50%;
+  -webkit-transform:rotate(-3deg);
+  -webkit-box-shadow: 3px 3px 5px black;
+  box-shadow: 3px 3px 5px black;
+
+}
