@@ -6,6 +6,15 @@ function rollDice(){
 function Player2(roll){
   this.roll=roll;
 }
+cumulativeArray=[];
+function cumulativeTotal(){
+  var total=0;
+  for (var i = 0; i < cumulativeArray.length; i++) {
+    total=total+ cumulativeArray[i]
+  }
+  return total;
+}
+
 var player2Array=[];
 function player2Total(){
   var total=0;
@@ -18,6 +27,7 @@ player2Total();
 var newScore=[];
 var constArray=[];
 var imageArray=["img/one.png","img/two.png","img/three.png","img/four.png","img/five.png","img/six.png"]
+
 $(document).ready(function(){
 	$("#play").click(function(){
 		$("#players").fadeIn(2000);
@@ -86,6 +96,7 @@ $(document).ready(function(){
     for(i=0;i<newScore.length;i++){
       total=total+newScore[i]
     }
+
     $("#perRound").text(total)
     var newtotal=0;
     for(z=0;z<constArray.length;z++){
@@ -99,17 +110,15 @@ $(document).ready(function(){
 
   else {
         alert("you rolled one and your roll has ended ")
-        $("#show").text(0)
+				$("#perRound").text(0);
         /////////
         var em=[]
         em.push(total)
 
         console.log(em)
         newScore.length=0;
-
-
-
-
+				$("#rollOne").prop('disabled',true)
+				$("#play2Roll").prop("disabled",false)
 
   }
 	if(newtotal>99){
@@ -124,6 +133,7 @@ $(document).ready(function(){
     $("#perRound").text(0);
     newScore.length=0;
     $("#save").text(newtotal)
+
   })
 	$("#restart").click(function(){
 		newScore.length=0;
@@ -155,24 +165,25 @@ $(document).ready(function(){
 		$("#rolledTwo").text(roll);
 		if(roll!=1){
 			player2Array.push(roll);
+			cumulativeArray.push(roll)
 
-		}
-		else {
+		}else {
 			alert("You rolled one and your round has ended ")
 			player2ArrayCopy=[];
 			player2ArrayCopy.push(player2Total());
 			var tt=player2ArrayCopy;
-			$("#saveTwo").text(tt)
 			player2Array.length=0;
+			$("#rollOne").prop('disabled',false)
+			$("#play2Roll").prop("disabled",true)
 
 
 
 		}
 		$("#playTwoTotal").text(player2Total());
 		$("#holdTwo").click(function(){
-			$("#saveTwo").text(player2Total())
-
-
+			player2Array.length=0;
+			$("#playTwoTotal").text("0");
+			$("#saveTwo").text(cumulativeTotal())
 
 		})
 
