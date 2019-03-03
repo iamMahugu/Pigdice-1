@@ -188,32 +188,32 @@ $(document).ready(function(){
 		$("#rolledTwo").text(roll);
 		if(roll==1){
 			var img=0
-			document.getElementById('img').src=imageArray[img];
+			document.getElementById('img1').src=imageArray[img];
 
 		}
-		else if (diceMe==2) {
+		else if (roll==2) {
 			var img=1;
-			document.getElementById('img').src=imageArray[img];
+			document.getElementById('img1').src=imageArray[img];
 
 		}
-		else if (diceMe==3) {
+		else if (roll==3) {
 			var img=2;
-			document.getElementById('img').src=imageArray[img];
+			document.getElementById('img1').src=imageArray[img];
 
 		}
-		else if (diceMe==4) {
+		else if (roll==4) {
 			var img=3;
-			document.getElementById('img').src=imageArray[img];
+			document.getElementById('img1').src=imageArray[img];
 
 		}
-		else if (diceMe==5) {
+		else if (roll==5) {
 			var img=4;
-			document.getElementById('img').src=imageArray[img];
+			document.getElementById('img1').src=imageArray[img];
 
 		}
 		else {
 			var img=5;
-			document.getElementById('img').src=imageArray[img];
+			document.getElementById('img1').src=imageArray[img];
 		}
 		if(roll!=1){
 			player2Array.push(roll);
