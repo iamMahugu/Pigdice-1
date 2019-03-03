@@ -1,3 +1,6 @@
+body{
+  background-color: #187451;
+}
 .card h1{
   text-align: center;
   margin: 5px;
@@ -5,7 +8,7 @@
 
 }
 #nav{
-  background-color:rgba(255,255,255,0.6);
+  background-color:white;
 }
 #nav ul li a{
   color: #124;
@@ -51,7 +54,9 @@ footer{
 #shake{
   float: right;
 }
-
+#show1,#show2{
+  display: none;
+}
 .result{
   box-shadow: 3px 3px 5px black;
   background-color: rgba(0,0,0,0.2);
@@ -72,4 +77,7 @@ footer{
   text-transform: capitalize;
   text-shadow: 2px 2px 2px #8417;
   font-size: 20px;
+}
+footer{
+  background-color: #12889963;
 }

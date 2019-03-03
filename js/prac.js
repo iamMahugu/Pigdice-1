@@ -14,7 +14,18 @@ $(document).ready(function(){
 	})
 	$("#players").submit(function(event){
 		event.preventDefault();
-		
+		var playerOne=$("#play1").val();
+		var playerTwo=$("#play2").val();
+		$("#players").hide();
+		$("#hide1").hide();
+		$("#demo").hide();
+		$("#show2").slideDown(2000);
+		$("#show1").slideDown(2000);
+		$("#show2").show();
+		$("#show1").show();
+		$("#one").text(playerOne);
+		$("#two").text(playerTwo);
+
 	})
 
 
