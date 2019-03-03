@@ -1,5 +1,5 @@
 # Pig Dice
-#### This is a web application, Its purpose is to provide a platform for technical exams on JavaScript, 2019
+#### This is a web application, Its a two  player  Dice rolling game , 2019
 #### By **[Collins kipkemoi](https://github.com/kipkemoimayor)**
 ## Description
 This application is a game Famously known as the Pig dice, This application is a Two player game with touch and feel UI
