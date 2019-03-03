@@ -118,7 +118,9 @@ $(document).ready(function(){
         console.log(em)
         newScore.length=0;
 				$("#rollOne").prop('disabled',true)
+				$("#rollOne").text("You rolled one its not your turn")
 				$("#play2Roll").prop("disabled",false)
+				$("#play2Roll").text("Roll Dice")
 
   }
 	if(newtotal>99){
@@ -133,6 +135,8 @@ $(document).ready(function(){
     $("#perRound").text(0);
     newScore.length=0;
     $("#save").text(newtotal)
+		$("#play2Roll").prop("disabled",false)
+		$("#play2Roll").text("Roll Dice")
 
   })
 	$("#restart").click(function(){
@@ -175,15 +179,20 @@ $(document).ready(function(){
 			player2Array.length=0;
 			$("#rollOne").prop('disabled',false)
 			$("#play2Roll").prop("disabled",true)
+			$("#rollOne").text("Roll Dice")
+			$("#play2Roll").text("You rolled one its not your turn")
 
 
 
 		}
 		$("#playTwoTotal").text(player2Total());
 		$("#holdTwo").click(function(){
+			$("#rollOne").prop('disabled',false)
+			$("#rollOne").text("Roll Dice")
 			player2Array.length=0;
 			$("#playTwoTotal").text("0");
 			$("#saveTwo").text(cumulativeTotal())
+
 
 		})
 
