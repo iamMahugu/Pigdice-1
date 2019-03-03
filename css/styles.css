@@ -39,3 +39,15 @@ footer{
   background-color: rgba(0,0,0,0.2);
   color: white;
 }
+#players{
+  display: none;
+}
+.jum{
+  background-image: url("../img/bg.gif");
+  height: 280px;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+#shake{
+  float: right;
+}

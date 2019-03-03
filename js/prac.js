@@ -7,6 +7,18 @@ var newScore=[];
 var constArray=[];
 
 $(document).ready(function(){
+	$("#play").click(function(){
+		$("#players").fadeIn(2000);
+		$("#players").show()
+		$("#demo").hide();
+	})
+	$("#players").submit(function(event){
+		event.preventDefault();
+		
+	})
+
+
+
   $("#roll").click(function(){
   var roll=rollDice();
   $("#id").text(roll)

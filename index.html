@@ -74,19 +74,37 @@
 
         </div>
         <div class="col-md-6">
+          <div id="demo" class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div id="jum" class="jum">
+                    <code> function shake(roll){<br>}<br> </code>
+                    <code class="btn btn-success">Return roll</code>
+                    <code id="shake" class="btn btn-success">Shake and Roll</code>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
           <div class="container">
             <div class="row">
               <div class="col-md-12">
                 <div class="card">
-                  <h1>Player 2</h1>
-                  <form id="player2" class="form-group" action="index.html" method="post">
+                  <form id="players" class="form-group" action="index.html" method="post">
+                    <h1>Register</h1>
                     <label for="">Player 1 Name</label>
                     <div class="form-group">
-                      <input class="form-control" type="text" name="" value="">
+                      <input required class="form-control" type="text" name="" value="" id="play1">
                     </div>
                     <label for="">Player 2 Name</label>
                     <div class="form-group">
-                      <input class="form-control" type="text" name="" value="">
+                      <input required class="form-control" type="text" name="" value="" id="play2">
                     </div>
                     <button class="btn btn-success" type="submit" name="button">Play game</button>
 
