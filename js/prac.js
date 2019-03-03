@@ -3,8 +3,16 @@ function rollDice(){
 	var result= Math.ceil(Math.random()*6)
 	return Math.round(result)
 }
-function PlayerTwo(rollTwo){
-	this.rollTwo=[];
+function Player2(roll){
+  this.roll=roll;
+}
+var player2Array=[];
+function player2Total(){
+  var total=0;
+  for (var i = 0; i < player2Array.length; i++) {
+    total=total+ player2Array[i]
+  }
+  return total;
 }
 var newScore=[];
 var constArray=[];
@@ -145,7 +153,15 @@ $(document).ready(function(){
 	$("#play2Roll").click(function(){
 		var roll=rollDice();
 		$("#rolledTwo").text(roll);
+		if(roll!=1){
+			player2Array.push(roll);
+
+		}
+		$("#playTwoTotal").text(player2Total());
+
+
 	})
+
 
 
 
