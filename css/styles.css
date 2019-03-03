@@ -8,3 +8,21 @@ h1{
 .one div{
   margin: 5px;
 }
+#nav{
+  background-color:rgba(255,255,255,0.6);
+}
+#nav ul li a{
+  color: #124;
+}
+#nav ul li a:hover{
+  color: #8456;
+}
+#brand{
+  font-family: 'Roboto';
+  font-size: 25px;
+  font-weight: bold;
+  color: green;
+}
+#brand:hover{
+  color: #8456;
+}
