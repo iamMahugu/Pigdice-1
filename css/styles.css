@@ -1,12 +1,8 @@
-h1{
-  color: blue;
+.card h1{
   text-align: center;
-}
-.card{
-  width: 20%;
-}
-.one div{
   margin: 5px;
+  padding: 5px;
+
 }
 #nav{
   background-color:rgba(255,255,255,0.6);
@@ -25,4 +21,11 @@ h1{
 }
 #brand:hover{
   color: #8456;
+}
+footer{
+  position: relative;
+  border-bottom: 0;
+}
+#player1,#player2{
+  width: 50%;
 }
