@@ -14,6 +14,7 @@ function player2Total(){
   }
   return total;
 }
+player2Total();
 var newScore=[];
 var constArray=[];
 var imageArray=["img/one.png","img/two.png","img/three.png","img/four.png","img/five.png","img/six.png"]
@@ -80,8 +81,7 @@ $(document).ready(function(){
   var total=0
   if (roll!=1) {
     newScore.push(roll);
-    constArray.push(roll);
-
+		constArray.push(roll);
 
     for(i=0;i<newScore.length;i++){
       total=total+newScore[i]
@@ -157,7 +157,25 @@ $(document).ready(function(){
 			player2Array.push(roll);
 
 		}
+		else {
+			alert("You rolled one and your round has ended ")
+			player2ArrayCopy=[];
+			player2ArrayCopy.push(player2Total());
+			var tt=player2ArrayCopy;
+			$("#saveTwo").text(tt)
+			player2Array.length=0;
+
+
+
+		}
 		$("#playTwoTotal").text(player2Total());
+		$("#holdTwo").click(function(){
+			$("#saveTwo").text(player2Total())
+
+
+
+		})
+
 
 
 	})
