@@ -29,3 +29,13 @@ footer{
 #player1,#player2{
   width: 50%;
 }
+.jumbotron{
+  background-image: url("../img/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.overlay{
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+}
