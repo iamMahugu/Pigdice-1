@@ -3,6 +3,9 @@ function rollDice(){
 	var result= Math.ceil(Math.random()*6)
 	return Math.round(result)
 }
+function PlayerTwo(rollTwo){
+	this.rollTwo=[];
+}
 var newScore=[];
 var constArray=[];
 var imageArray=["img/one.png","img/two.png","img/three.png","img/four.png","img/five.png","img/six.png"]
@@ -27,11 +30,12 @@ $(document).ready(function(){
 		$("#two").text(playerTwo);
 		$("#winOne").hide();
 		$("#winTwo").hide();
+		$("#restart").hide();
 
 	})
 
 
-
+//PLay One Interface
   $("#rollOne").click(function(){
   var roll=rollDice();
 	var diceMe=roll;
@@ -100,11 +104,33 @@ $(document).ready(function(){
 
 
   }
+	if(newtotal>99){
+		$("#diceOne").hide();
+		$("#winOne").fadeIn(1000);
+		$("#winOne").show();
+		$("#restart").fadeIn();
+		$("#restart").show();
+
+	}
   $("#holdOne").click(function(){
     $("#perRound").text(0);
     newScore.length=0;
     $("#save").text(newtotal)
   })
+	$("#restart").click(function(){
+		newScore.length=0;
+		newtotal=0;
+		constArray.length=0;
+		$("#perRound").text("00.00");
+		$("#save").text("00.00");
+		$("#playone").text("00.00");
+		$("#restart").hide();
+		$("#diceOne").show();
+		$("#winOne").hide();
+
+
+
+	})
 
   /*var green=[];
   green.push(total);
@@ -113,4 +139,15 @@ $(document).ready(function(){
 
 
   });
+
+
+	//player Two Interface
+	$("#play2Roll").click(function(){
+		var roll=rollDice();
+		$("#rolledTwo").text(roll);
+	})
+
+
+
+
   });

@@ -94,7 +94,7 @@ footer{
   margin: auto;
   width:50%;
   height: auto;
-  margin-left: 200px;
+  float: right;
 }
 .dice img{
   height: 50px;
