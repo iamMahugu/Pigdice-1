@@ -11,6 +11,9 @@ function PlayersNames(playOne,playTwo){
 	this.playOne=playOne;
 	this.playTwo=playTwo;
 }
+PlayersNames.prototype.emotions=function newEmotions(){
+	return this+"You won !!!!"
+}
 
 cumulativeArray=[];
 var player2Array=[];
@@ -170,7 +173,7 @@ $(document).ready(function(){
 		$("#two").addClass("green");
 		$("#rollOne").prop("disabled",true)
 
-		if(newPlayerScore>=100){
+		if(newPlayerScore>=10){
 				$("#diceOne").hide();
 				$("#winOne").fadeIn(1000);
 				$("#winOne").show();
@@ -183,6 +186,7 @@ $(document).ready(function(){
 				$("one").animate({
 					transition:"400ms",
 				})
+
 
 			}
 
