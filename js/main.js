@@ -31,6 +31,33 @@ var imageArray=["img/one.png","img/two.png","img/three.png","img/four.png","img/
 
 // The user interface Logic
 
+function restartGame(){
+	newScore.length=0;
+	newtotal=0;
+	cumulativeArray.length=0;
+	constArray.length=0;
+	$("#perRound").text("00.00");
+	$("#save").text("00.00");
+	$("#playone").text("00.00");
+	$("#restart").hide();
+	$("#diceOne").show();
+	$("#winOne").hide();
+	$("#diceOne").show();
+	$("#winOne").hide();
+	$("#saveTwo").text("00.00");
+	$("#playTwoTotal").text("00.00");
+	$("#rolledTwo").text("00.00");
+	$("#restart2").hide();
+	$("#diceTwo").show();
+	$("#winTwo").hide();
+	$("#two").removeClass();
+	$("#one").removeClass();
+	$("#img").attr('src','img/dis.jpg');
+	$("#img1").attr('src','img/dis.jpg');
+
+
+}
+
 $(document).ready(function(){
 	$("#play").click(function(){
 		$("#players").fadeIn(2000);
@@ -54,8 +81,6 @@ $(document).ready(function(){
 		$("#winTwo").hide();
 		$("#restart").hide();
 		$("#restart2").hide();
-
-
 	})
 
 
@@ -157,29 +182,7 @@ $(document).ready(function(){
 
   })
 	$("#restart").click(function(){
-		newScore.length=0;
-		newtotal=0;
-		cumulativeArray.length=0;
-		constArray.length=0;
-		$("#perRound").text("00.00");
-		$("#save").text("00.00");
-		$("#playone").text("00.00");
-		$("#restart").hide();
-		$("#diceOne").show();
-		$("#winOne").hide();
-		$("#diceOne").show();
-		$("#winOne").hide();
-		$("#saveTwo").text("00.00");
-		$("#playTwoTotal").text("00.00");
-		$("#rolledTwo").text("00.00");
-		$("#restart2").hide();
-		$("#diceTwo").show();
-		$("#winTwo").hide();
-		$("#two").removeClass();
-		$("#one").removeClass();
-
-
-
+		restartGame();
 	})
 
 	//player Two Interface
@@ -275,26 +278,7 @@ $(document).ready(function(){
 
 
 		$("#restart2").click(function(){
-			newScore.length=0;
-			newtotal=0;
-			cumulativeArray.length=0;
-
-			constArray.length=0;
-			$("#perRound").text("00.00");
-			$("#save").text("00.00");
-			$("#playone").text("00.00");
-			$("#restart").hide();
-			$("#diceOne").show();
-			$("#winOne").hide();
-			$("#saveTwo").text("00.00");
-			$("#playTwoTotal").text("00.00");
-			$("#rolledTwo").text("00.00");
-			$("#restart2").hide();
-			$("#diceTwo").show();
-			$("#winTwo").hide();
-			$("#two").removeClass();
-			$("#one").removeClass();
-
+			restartGame();
 		})
 
 
