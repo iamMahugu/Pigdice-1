@@ -54,6 +54,8 @@ function restartGame(){
 	$("#one").removeClass();
 	$("#img").attr('src','img/dis.jpg');
 	$("#img1").attr('src','img/dis.jpg');
+	$("#play2Roll").prop("disabled",false)
+	$("#rollOne").prop("disabled",false)
 
 
 }
@@ -176,6 +178,10 @@ $(document).ready(function(){
 				$("#winOne").show();
 				$("#restart").fadeIn();
 				$("#restart").show();
+				$("#play2Roll").prop("disabled",true);
+				$("#rollOne").prop("disabled",true)
+				$("#restart2").fadeIn();
+				$("#restart2").show();
 
 			}
 
@@ -248,7 +254,7 @@ $(document).ready(function(){
 
 			}
 			var changeCumulative=parseInt(cumulativeArray);
-			player2Array.lenth=0;
+			player2Array.length=0;
 
 			var playerTwoTotal=0;
 			for (var index = 0; index < cumulativeArray.length; index++) {
@@ -270,6 +276,10 @@ $(document).ready(function(){
 				$("#winTwo").show();
 				$("#restart2").fadeIn();
 				$("#restart2").show();
+				$("#play2Roll").prop("disabled",true)
+				$("#rollOne").prop("disabled",true)
+				$("#restart").fadeIn();
+				$("#restart").show();
 
 			}
 
