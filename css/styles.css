@@ -7,6 +7,7 @@ body{
   padding: 5px;
 
 }
+
 #nav{
   background-color:white;
 }
@@ -107,4 +108,17 @@ footer{
 }
 #face{
   font-size: 10px;
+}
+@media screen and (min-width:1000px) {
+  .card p,code,i{
+    font-size: 15px;
+
+  }
+
+}
+@media screen and (max-width:500px) {
+  body{
+    background-color: #F0F8FF;
+  }
+
 }
