@@ -180,6 +180,9 @@ $(document).ready(function(){
 				$("#rollOne").prop("disabled",true)
 				$("#restart2").fadeIn();
 				$("#restart2").show();
+				$("one").animate({
+					transition:"400ms",
+				})
 
 			}
 
