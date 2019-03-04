@@ -173,7 +173,7 @@ $(document).ready(function(){
 		$("#two").addClass("green");
 		$("#rollOne").prop("disabled",true)
 
-		if(newPlayerScore>=10){
+		if(newPlayerScore>=100){
 				$("#diceOne").hide();
 				$("#winOne").fadeIn(1000);
 				$("#winOne").show();
