@@ -1,3 +1,4 @@
+// Bussiness Logic
 function rollDice(){
 
 	var result= Math.ceil(Math.random()*6)
@@ -27,6 +28,9 @@ player2Total();
 var newScore=[];
 var constArray=[];
 var imageArray=["img/one.png","img/two.png","img/three.png","img/four.png","img/five.png","img/six.png"]
+
+
+// The user interface Logic
 
 $(document).ready(function(){
 	$("#play").click(function(){
@@ -276,17 +280,9 @@ $(document).ready(function(){
 			$("#winTwo").hide();
 			$("#two").removeClass();
 			$("#one").removeClass();
-
-
-
+      
 		})
 
-
-
 	})
-
-
-
-
 
   });
