@@ -7,15 +7,12 @@ function rollDice(){
 function Player2(roll){
   this.roll=roll;
 }
-cumulativeArray=[];
-/*function cumulativeTotal(){
-  var total=0;
-  for (var i = 0; i < cumulativeArray.length; i++) {
-    total=total+ cumulativeArray[i]
-  }
-  return total;
-}*/
+function PlayersNames(playOne,playTwo){
+	this.playOne=playOne;
+	this.playTwo=playTwo;
+}
 
+cumulativeArray=[];
 var player2Array=[];
 function player2Total(){
   var total=0;
@@ -70,6 +67,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		var playerOne=$("#play1").val();
 		var playerTwo=$("#play2").val();
+		var playerNames=new PlayersNames(playerOne,playerTwo);
 		$("#players").hide();
 		$("#hide1").hide();
 		$("#demo").hide();
@@ -77,8 +75,8 @@ $(document).ready(function(){
 		$("#show1").slideDown(2000);
 		$("#show2").show();
 		$("#show1").show();
-		$("#one").text(playerOne);
-		$("#two").text(playerTwo);
+		$("#one").text(playerNames.playOne);
+		$("#two").text(playerNames.playTwo);
 		$("#winOne").hide();
 		$("#winTwo").hide();
 		$("#restart").hide();
